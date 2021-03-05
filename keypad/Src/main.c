@@ -9,17 +9,17 @@ int main()
 	 gpio_output   volatile*const ptroutput  = ( gpio_output*  )   0x40020C14;
 	 pullupdown    volatile*const ptrpull    = ( pullupdown*   )   0x40020C0C;
 	 gpio_input    volatile*const ptrinput   = ( gpio_input*   )   0x40020C10;
-    ptrclk->gpio_den=1;
+        ptrclk->gpio_den=1;
 
-    ptrmode->MODER0		=0;
+        ptrmode->MODER0		=0;
 	ptrmode->MODER1		=0;
 	ptrmode->MODER2		=0;
 	ptrmode->MODER3		=0;
 	ptrmode->MODER8		=1;
 	ptrmode->MODER9 	=1;
-    ptrmode->MODER10 	=1;
-    ptrmode->MODER11 	=1;
-    ptrpull->PUPDR0		=2;
+        ptrmode->MODER10 	=1;
+        ptrmode->MODER11 	=1;
+        ptrpull->PUPDR0		=2;
 	ptrpull->PUPDR1		=2;
 	ptrpull->PUPDR2		=2;
 	ptrpull->PUPDR3		=2;
@@ -69,7 +69,6 @@ int main()
 			printf("D\n");
 		else if (ptrinput->ODR0)
 			printf("&\n");
-	    else;
 		}
 		}
 		 }
